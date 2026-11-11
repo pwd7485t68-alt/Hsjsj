@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#6d45d9"><title>SkillUp — Aprenda fazendo</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-mark">S</span> SkillUp</a>
+  <nav><a href="#catalogo">Cursos</a><a href="#trilhas">Formações</a><a href="#como-funciona">Como funciona</a></nav>
+  <div class="account" id="accountArea"><button class="btn btn-light" id="loginOpen">Entrar</button><button class="btn" id="signupOpen">Começar grátis</button></div>
+</header>
+<main>
+<section class="hero">
+  <div class="hero-copy"><span class="eyebrow">APRENDA • PRATIQUE • EVOLUA</span><h1>Seu próximo nível<br><span>começa aqui.</span></h1>
+  <p>Aprenda tecnologia, criatividade e negócios com aulas práticas, projetos e desafios que levam você do zero à prática.</p>
+  <div class="hero-actions"><a class="btn" href="#catalogo">Explorar cursos</a><button class="btn btn-outline" id="heroSignup">Começar 3 meses grátis</button></div>
+  <small>3 meses grátis. Depois, R$ 29,99/mês. Cancele quando quiser.</small></div>
+  <div class="hero-art"><div class="orb orb1"></div><div class="orb orb2"></div><div class="learning-card"><div class="card-top"><span>SKILLUP / AULA 01</span><span class="live-dot">●</span></div><div class="code-window"><b>&lt; aprender /&gt;</b><p><i>const</i> futuro = <em>"seu"</em>;</p><p>futuro.<strong>construir</strong>();</p><div class="progress"><span></span></div></div><div class="card-foot">✦ Aprendizado na prática <b>+100 XP</b></div></div></div>
+</section>
+<section class="stats"><div><b>5</b><span>formações iniciais</span></div><div><b>100%</b><span>foco na prática</span></div><div><b>24/7</b><span>aprenda no seu ritmo</span></div></section>
+<section class="section" id="trilhas"><div class="section-head"><div><span class="eyebrow">CAMINHOS DE APRENDIZADO</span><h2>Escolha sua formação</h2></div><p>Uma jornada organizada para você desenvolver habilidades passo a passo.</p></div><div class="track-grid" id="trackGrid"></div></section>
+<section class="section catalog" id="catalogo"><div class="section-head"><div><span class="eyebrow">BIBLIOTECA SKILLUP</span><h2>Cursos em destaque</h2></div><input id="search" class="search" placeholder="Buscar curso..."></div><div class="course-grid" id="courseGrid"></div></section>
+<section class="section how" id="como-funciona"><span class="eyebrow">SUA JORNADA</span><h2>Aprenda de verdade, criando.</h2><div class="steps"><article><b>01</b><h3>Assista às aulas</h3><p>Conteúdo organizado em módulos curtos e objetivos.</p></article><article><b>02</b><h3>Pratique</h3><p>Exercícios, desafios e projetos conectados ao Replit.</p></article><article><b>03</b><h3>Acompanhe seu avanço</h3><p>Marque aulas concluídas e acompanhe seu progresso.</p></article></div></section>
+<section class="pricing"><span class="eyebrow">SKILLUP PREMIUM</span><h2>Comece sem pagar.</h2><p>Experimente por 3 meses e tenha acesso à jornada SkillUp.</p><div class="price"><strong>R$ 29,99</strong><span>/ mês após o período grátis</span></div><button class="btn" id="priceSignup">Começar meus 3 meses grátis</button><small>O período de teste começa no cadastro. A cobrança exige ativação de um meio de pagamento.</small></section>
+</main>
+<footer><a class="brand" href="#"><span class="brand-mark">S</span> SkillUp</a><span>Aprenda fazendo. Evolua sempre.</span><span>© 2026 SkillUp</span></footer>
+<div class="modal hidden" id="authModal"><div class="modal-box"><button class="close" id="modalClose">×</button><span class="eyebrow">BEM-VINDO À SKILLUP</span><h2 id="authTitle">Entre na sua conta</h2><form id="authForm"><label>Seu e-mail<input type="email" id="email" required placeholder="voce@email.com"></label><label>Senha<input type="password" id="password" minlength="6" required placeholder="Mínimo de 6 caracteres"></label><button class="btn full" id="authSubmit">Entrar</button></form><p id="authMessage" class="message"></p><button class="link-button" id="switchAuth">Não tem conta? Cadastre-se</button></div></div>
+<div class="modal hidden" id="lessonModal"><div class="modal-box lesson-box"><button class="close" id="lessonClose">×</button><div id="lessonContent"></div></div></div>
+<div class="toast" id="toast"></div>
+<script src="app.js"></script>
+</body></html>
